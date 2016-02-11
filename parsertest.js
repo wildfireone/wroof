@@ -19,7 +19,7 @@ var linecounter =0;
 var lines;
 var index;
 lineReader.on('line', function (line) {
-    lines[linecounter] = line.split(' ');
+    lines.push(line.split(' '));
     linecounter++;
 });
 
