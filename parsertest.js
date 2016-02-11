@@ -23,7 +23,7 @@ lineReader.on('line', function (line) {
     //4: Howmany wearhouse
     linecounter++;
     switch(linecounter){
-        case "1":
+        case 1:
             console.log("here");
             world = line.split(' ');
             r = world[0];
@@ -47,11 +47,14 @@ lineReader.on('line', function (line) {
         //.log('Line from file:', line);
     }
 
-});
-if(debug){
-    console.log("rows: "+r+" cols: "+c+" drones: "+drones+" turns: "+turns+" maxpayload: "+maxpay);
-    console.log("ptypes: "+ptypes);
-    console.log("productweights:"+productweights.length);
-    console.log("warehouses:" +warehouses.length);
-}
+}, done);
+
+function done() {
+    if (debug) {
+        console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
+        console.log("ptypes: " + ptypes);
+        console.log("productweights:" + productweights.length);
+        console.log("warehouses:" + warehouses.length);
+    }
+};
 
