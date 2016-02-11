@@ -63,7 +63,7 @@ lineReader.on('close', function(){
     index++;
     orders = new Array (parseInt(lines[index]));
 
-    for(var i=0; i< orders; i++){
+    for(var i=0; i< orders.length; i++){
         var cust = new customer(lines[index++]);
         console.log(cust);
         index++;
