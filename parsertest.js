@@ -20,7 +20,6 @@ var lines;
 var index;
 lineReader.on('line', function (line) {
     lines.push(line.split(' '));
-    linecounter++;
 });
 
 
