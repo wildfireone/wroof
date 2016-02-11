@@ -3,6 +3,7 @@
  */
 
 var inputfile = process.argv.slice(2);
+console.log(inputfile);
 fs = require('fs')
 fs.readFile(inputfile, 'utf8', function (err,data) {
     if (err) {
