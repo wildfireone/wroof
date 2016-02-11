@@ -1,10 +1,7 @@
 module.exports = function Order(productsArray, cust){
-	
-<<<<<<< HEAD
+
 	this.customer = cust;
-=======
-	this.customer =cust;
->>>>>>> origin/master
+
 
 	this.products = productsArray;
 
