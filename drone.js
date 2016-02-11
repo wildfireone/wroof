@@ -1,4 +1,4 @@
-var drone = function(loc, maxWeight){
+module.exports = function Drone(loc, maxWeight){
 
 	this.loc = loc;
 
