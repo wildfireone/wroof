@@ -16,48 +16,62 @@ var ptypes;
 var productweights;
 var warehouses;
 var linecounter =0;
+var lines;
+var index;
 lineReader.on('line', function (line) {
-    //1: rows cols drones turns maxpayload
-    //2: product types
-    //3: product weight
-    //4: Howmany wearhouse
+    lines[linecounter] = line.split(' ');
     linecounter++;
-    if(linecounter == 1) {
+});
 
-        console.log("here");
-        world = line.split(' ');
-        r = world[0];
-        c = world[1];
-        drones = world[2];
-        turns = world[3];
-        maxpay = world[4];
-    }
-    if(linecounter == 2) {
-        ptypes = line;
-    }
-    if(linecounter == 3) {
-        productweights = line.split(' ');
-    }
-    if(linecounter == 4) {
-        warehouses = new Array(parseInt(line));
+
+lineReader.on('close', function(){
+    while(index<lines.length){
+
+
+        //1: rows cols drones turns maxpayload
+        //2: product types
+        //3: product weight
+        //4: Howmany wearhouse
+
+        if(index == 0) {
+
+            console.log("here");
+            world = lines[0];
+            r = world[0];
+            c = world[1];
+            drones = world[2];
+            turns = world[3];
+            maxpay = world[4];
+        }
+        if(index == 1) {
+            ptypes = lines[1];
+        }
+        if(linecounter == 2) {
+            productweights = lines[2];
+        }
+        if(linecounter == 3) {
+            warehouses = new Array(parseInt(lines[3]));
+        }
+
+        index ++;
+
+
     }
 
-    //if(line == null){
-     //   lr.close();
-    //}
+//if(line == null){
+//   lr.close();
+//}
     if(debug) {
         //.log('Line from file:', line);
     }
-
-});
-
-lineReader.on('close', function () {
     if (debug) {
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
         console.log("productweights:" + productweights.length);
         console.log("warehouses:" + warehouses.length);
     }
-});
+
+} );
+
 
 
