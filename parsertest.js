@@ -84,7 +84,7 @@ lineReader.on('close', function(){
     if (debug) {
         var map = new Array(r);
         for (var i = 0; i < r; i++) {
-            map[i] = new Array(c);
+            map[i] = new Array(parseInt(c));
         }
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
