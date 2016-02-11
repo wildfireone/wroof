@@ -1,9 +1,7 @@
-var customer = function(orderArray, custLoc){
+var customer = function(custLoc){
 
-	this.orders = orderArray;
+	this.ordersArray;
 
-	this.loc = [custLoc[0], custLoc[1]];
-
-	
+	this.loc = custLoc;
 
 }
