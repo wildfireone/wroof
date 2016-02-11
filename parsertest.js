@@ -31,8 +31,9 @@ lineReader.on('line', function (line) {
 
     }
 
-
-    console.log('Line from file:', line);
+    if(debug) {
+        console.log('Line from file:', line);
+    }
 
 });
 
