@@ -22,27 +22,25 @@ lineReader.on('line', function (line) {
     //3: product weight
     //4: Howmany wearhouse
     linecounter++;
-    switch(linecounter){
-        case 1:
-            console.log("here");
-            world = line.split(' ');
-            r = world[0];
-            c = world[1];
-            drones = world[2];
-            turns = world[3];
-            maxpay = world[4];
-            break;
-        case 2:
-            ptypes = line;
-            break;
-        case 3:
-            productweights = line.split(' ');
-            break;
-        case 4:
-            warehouses = new Array(line);
-            break;
-    }
+    if(linecounter == 1) {
 
+        console.log("here");
+        world = line.split(' ');
+        r = world[0];
+        c = world[1];
+        drones = world[2];
+        turns = world[3];
+        maxpay = world[4];
+    }
+    if(linecounter == 2) {
+        ptypes = line;
+    }
+    if(linecounter == 3) {
+        productweights = line.split(' ');
+    }
+    if(linecounter == 4) {
+        warehouses = new Array(line);
+    }
     if(debug) {
         //.log('Line from file:', line);
     }
