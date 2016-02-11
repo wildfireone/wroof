@@ -45,11 +45,10 @@ lineReader.on('close', function(){
         if(index == 1) {
             ptypes = lines[1];
         }
-        if(linecounter == 2) {
-            console.log(lines[2]);
+        if(index== 2) {
             productweights = lines[2];
         }
-        if(linecounter == 3) {
+        if(index == 3) {
             warehouses = new Array(parseInt(lines[3]));
         }
 
