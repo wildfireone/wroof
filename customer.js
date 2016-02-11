@@ -1,4 +1,4 @@
-var customer = function(custLoc){
+module.exports = function Customer(custLoc){
 
 	//this.ordersArray;
 
