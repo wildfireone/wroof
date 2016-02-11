@@ -39,7 +39,7 @@ lineReader.on('line', function (line) {
         productweights = line.split(' ');
     }
     if(linecounter == 4) {
-        warehouses = new Array(line);
+        warehouses = line; //new Array(line);
     }
 
     //if(line == null){
@@ -56,7 +56,7 @@ lineReader.on('close', function () {
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
         console.log("productweights:" + productweights.length);
-        console.log("warehouses:" + warehouses.length);
+        console.log("warehouses:" + warehouses);
     }
 });
 
