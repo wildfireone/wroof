@@ -89,6 +89,9 @@ lineReader.on('close', function(){
         for(var i=0; i< orders.length;i++){
             console.log(orders[i]);
         }
+        for(var i=0; i< warehouses.length;i++){
+            console.log(warehouses[i]);
+        }
     }
 
 } );
