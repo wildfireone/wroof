@@ -1,4 +1,4 @@
-var map = function(xLength, yLength){
+module.exports = function Map(xLength, yLength){
 
 	this.xLength = xLength;
 
