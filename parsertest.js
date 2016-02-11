@@ -65,11 +65,11 @@ lineReader.on('close', function(){
     orders = new Array (parseInt(lines[index]));
 
     for(var i=0; i< orders.length; i++){
-        var cust = new customer(lines[index++]);
+        var cust = new Customer(lines[index++]);
         console.log(cust);
         index++;
         var prod =  lines[index++];
-        orders[i] = new order(prod, cust);
+        orders[i] = new Order(prod, cust);
     }
 
 //if(line == null){
