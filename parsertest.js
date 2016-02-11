@@ -64,10 +64,10 @@ lineReader.on('close', function(){
     orders = new Array (parseInt(lines[index]));
 
     for(var i=0; i< orders; i++){
-        orders[i] = new Array();
-        orders[i].push(lines[index++]);
-        orders[i].push(lines[index++]);
-        orders[i].push(lines[index++]);
+        var cust = new customer(lines[index++]);
+        index++;
+        var prod =  lines[index++];
+        orders[i].push(new order(prod, cust));
     }
 
 //if(line == null){

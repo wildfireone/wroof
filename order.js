@@ -1,6 +1,10 @@
 var order = function(productsArray, cust){
 	
+<<<<<<< HEAD
 	this.customer = cust;
+=======
+	this.customer =cust;
+>>>>>>> origin/master
 
 	this.products = productsArray;
 
