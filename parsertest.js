@@ -97,6 +97,11 @@ lineReader.on('close', function(){
         for(var i=0; i< warehouses.length;i++){
             console.log(warehouses[i]);
         }
+        for (var i = 0; i < r; i++) {
+            console.log(map[r];
+
+        }
+
     }
 
 } );
