@@ -23,7 +23,7 @@ lineReader.on('line', function (line) {
     //4: Howmany wearhouse
     linecounter++;
     switch(linecounter){
-        case '1':
+        case "1":
             console.log("here");
             world = line.split(' ');
             r = world[0];
