@@ -2,6 +2,5 @@
  * Created by Isaacs on 11/02/2016.
  */
 
-process.argv.forEach(function (val, index, array) {
-    console.log(index + ': ' + val);
-});
+console.log(process.argv.slice(2));
+
