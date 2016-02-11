@@ -82,7 +82,7 @@ lineReader.on('close', function(){
         //.log('Line from file:', line);
     }
     if (debug) {
-        map = new Array[r,c];
+        map = new Array[r][c];
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
         console.log("productweights:" + productweights.length);
