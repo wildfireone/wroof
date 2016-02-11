@@ -1,6 +1,6 @@
 var order = function(productsArray, cust){
 	
-	this.customer;
+	this.customer =cust;
 
 	this.products = productsArray;
 
