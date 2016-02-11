@@ -1,4 +1,4 @@
-var warehouse = function(items, loc){
+module.exports = function Warehouse(items, loc){
 
 	this.itemsArray = items;
 	

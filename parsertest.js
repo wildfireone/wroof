@@ -3,6 +3,7 @@
  */
 var Customer = require('./customer.js');
 var Order = require('./order.js');
+var Warehouse = require('./warehouse.js');
     var debug = true;
 
 var inputfile = process.argv.slice(2)[0];
