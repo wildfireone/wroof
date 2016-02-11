@@ -24,6 +24,7 @@ lineReader.on('line', function (line) {
     linecounter++;
     switch(linecounter){
         case 1:
+            console.log("here");
             world = line.split(' ');
             r = world[0];
             c = world[1];
