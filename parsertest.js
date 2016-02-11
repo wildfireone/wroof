@@ -46,6 +46,7 @@ lineReader.on('close', function(){
             ptypes = lines[1];
         }
         if(linecounter == 2) {
+            console.log(lines[2]);
             productweights = lines[2];
         }
         if(linecounter == 3) {
