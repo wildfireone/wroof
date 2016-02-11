@@ -82,6 +82,9 @@ lineReader.on('close', function(){
         console.log("productweights:" + productweights.length);
         console.log("warehouses:" + warehouses.length);
         console.log("orders:" + orders.length);
+        for(var i=0; i< orders.length;i++){
+            console.log(orders[i].productsTotalWeight);
+        }
     }
 
 } );
