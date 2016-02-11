@@ -32,7 +32,7 @@ lineReader.on('line', function (line) {
     }
 
     if(debug) {
-        console.log('Line from file:', line);
+        //.log('Line from file:', line);
     }
 
 });
