@@ -16,7 +16,7 @@ var ptypes;
 var productweights;
 var warehouses;
 var linecounter =0;
-var lines;
+var lines = new Array();
 var index;
 lineReader.on('line', function (line) {
     lines.push(line.split(' '));
