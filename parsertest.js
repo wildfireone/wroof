@@ -17,7 +17,7 @@ lineReader.on('line', function (line) {
     //3: product weight
     //4: Howmany wearhouse
     linecounter++;
-    if(linecounter==0) {
+    if(linecounter==1) {
         var world = line.split(' ');
         var r = world[0];
         var c = world[1];
