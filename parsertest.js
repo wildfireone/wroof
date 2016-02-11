@@ -56,6 +56,7 @@ lineReader.on('close', function(){
     }
 
     for(var i=0; i< warehouses.length; i++){
+        warehouses[i] = new Array();
         warehouses[i].push(lines[index++]);
         warehouses[i].push(lines[index++]);
     }
@@ -63,6 +64,7 @@ lineReader.on('close', function(){
     orders = new Array (parseInt(lines[index]));
 
     for(var i=0; i< orders; i++){
+        orders[i] = new Array();
         orders[i].push(lines[index++]);
         orders[i].push(lines[index++]);
         orders[i].push(lines[index++]);
