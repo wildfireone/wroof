@@ -41,6 +41,9 @@ lineReader.on('line', function (line) {
     if(linecounter == 4) {
         warehouses = new Array(line);
     }
+    if(line == null){
+        lr.close();
+    }
     if(debug) {
         //.log('Line from file:', line);
     }
