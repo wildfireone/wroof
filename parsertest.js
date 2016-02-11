@@ -41,16 +41,17 @@ lineReader.on('line', function (line) {
     if(linecounter == 4) {
         warehouses = new Array(line);
     }
-    if(line == null){
-        lr.close();
-    }
+
+    //if(line == null){
+     //   lr.close();
+    //}
     if(debug) {
         //.log('Line from file:', line);
     }
 
 });
 
-lineReader.on('end', function () {
+lineReader.on('close', function () {
     if (debug) {
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
