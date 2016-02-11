@@ -67,7 +67,7 @@ lineReader.on('close', function(){
         var cust = new customer(lines[index++]);
         index++;
         var prod =  lines[index++];
-        orders[i].push(new order(prod, cust));
+        orders[i] = (new order(prod, cust));
     }
 
 //if(line == null){
