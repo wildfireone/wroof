@@ -18,13 +18,14 @@ var warehouses;
 var linecounter =0;
 var lines = new Array();
 var index =0;
+var orders =0;
 lineReader.on('line', function (line) {
     lines.push(line.split(' '));
 });
 
 
 lineReader.on('close', function(){
-    while(index<lines.length){
+    while(index<4){
 
 
         //1: rows cols drones turns maxpayload
@@ -51,10 +52,20 @@ lineReader.on('close', function(){
         if(index == 3) {
             warehouses = new Array(parseInt(lines[3]));
         }
-
         index ++;
+    }
 
+    for(var i=0; i< warehouses.length; i++){
+        warehouses[i][0] = lines[index++];
+        warehouses[i][1] = lines[index++];
+    }
+    index++;
+    orders = new Array (parseInt(lines[index]));
 
+    for(var i=0; i< orders; i++){
+        orders[i][0] = lines[index++];
+        orders[i][1] = lines[index++];
+        orders[i][2] = lines[index++];
     }
 
 //if(line == null){
@@ -68,6 +79,7 @@ lineReader.on('close', function(){
         console.log("ptypes: " + ptypes);
         console.log("productweights:" + productweights.length);
         console.log("warehouses:" + warehouses.length);
+        console.log("orders:" + orders.length);
     }
 
 } );
