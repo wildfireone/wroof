@@ -58,9 +58,10 @@ lineReader.on('close', function(){
     }
 
     for(var i=0; i< warehouses.length; i++){
-        warehouses[i] = new Array();
-        warehouses[i].push(lines[index++]);
-        warehouses[i].push(lines[index++]);
+
+        var loc = lines[index++];
+        var items = lines[index++];
+        warehouses[i] = new Warehouse(items,loc);
     }
     index++;
     orders = new Array (parseInt(lines[index]));
@@ -87,6 +88,9 @@ lineReader.on('close', function(){
         console.log("orders:" + orders.length);
         for(var i=0; i< orders.length;i++){
             console.log(orders[i]);
+        }
+        for(var i=0; i< warehouses.length;i++){
+            console.log(warehouses[i]);
         }
     }
 
