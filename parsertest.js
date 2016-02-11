@@ -47,14 +47,15 @@ lineReader.on('line', function (line) {
         //.log('Line from file:', line);
     }
 
-}, done);
+});
 
-function done() {
+lineReader.on('end', function () {
     if (debug) {
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
         console.log("productweights:" + productweights.length);
         console.log("warehouses:" + warehouses.length);
     }
-};
+});
+
 
