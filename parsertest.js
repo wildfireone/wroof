@@ -1,7 +1,8 @@
 /**
  * Created by Isaacs on 11/02/2016.
  */
-
+var customer = require('./customer.js');
+var order = require('./order.js');
     var debug = true;
 
 var inputfile = process.argv.slice(2)[0];
@@ -63,11 +64,12 @@ lineReader.on('close', function(){
     index++;
     orders = new Array (parseInt(lines[index]));
 
-    for(var i=0; i< orders; i++){
+    for(var i=0; i< orders.length; i++){
         var cust = new customer(lines[index++]);
+        console.log(cust);
         index++;
         var prod =  lines[index++];
-        orders[i].push(new order(prod, cust));
+        orders[i] = new order(prod, cust);
     }
 
 //if(line == null){
@@ -82,6 +84,9 @@ lineReader.on('close', function(){
         console.log("productweights:" + productweights.length);
         console.log("warehouses:" + warehouses.length);
         console.log("orders:" + orders.length);
+        for(var i=0; i< orders.length;i++){
+            console.log(orders[i]);
+        }
     }
 
 } );
