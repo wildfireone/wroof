@@ -56,16 +56,16 @@ lineReader.on('close', function(){
     }
 
     for(var i=0; i< warehouses.length; i++){
-        warehouses[i][0] = lines[index++];
-        warehouses[i][1] = lines[index++];
+        warehouses[i].push(lines[index++]);
+        warehouses[i].push(lines[index++]);
     }
     index++;
     orders = new Array (parseInt(lines[index]));
 
     for(var i=0; i< orders; i++){
-        orders[i][0] = lines[index++];
-        orders[i][1] = lines[index++];
-        orders[i][2] = lines[index++];
+        orders[i].push(lines[index++]);
+        orders[i].push(lines[index++]);
+        orders[i].push(lines[index++]);
     }
 
 //if(line == null){
