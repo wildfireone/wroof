@@ -21,6 +21,7 @@ var linecounter =0;
 var lines = new Array();
 var index =0;
 var orders =0;
+var map;
 lineReader.on('line', function (line) {
     lines.push(line.split(' '));
 });
@@ -81,6 +82,7 @@ lineReader.on('close', function(){
         //.log('Line from file:', line);
     }
     if (debug) {
+        map = new Array[r,c];
         console.log("rows: " + r + " cols: " + c + " drones: " + drones + " turns: " + turns + " maxpayload: " + maxpay);
         console.log("ptypes: " + ptypes);
         console.log("productweights:" + productweights.length);
