@@ -53,7 +53,7 @@ lineReader.on('line', function (line) {
 });
 if(debug){
     console.log("rows: "+r+" cols: "+c+" drones: "+drones+" turns: "+turns+" maxpayload: "+maxpay);
-    console.log("ptypes: "+pytpes);
+    console.log("ptypes: "+ptypes);
     console.log("productweights:"+productweights.length);
     console.log("warehouses:" +warehouses.length);
 }
