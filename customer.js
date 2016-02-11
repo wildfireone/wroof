@@ -4,4 +4,6 @@ var customer = function(orderArray, custLoc){
 
 	this.loc = [custLoc[0], custLoc[1]];
 
+	
+
 }

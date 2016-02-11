@@ -1,6 +1,6 @@
-var order = function(timenArray){
+var order = function(productsArray){
 	
-	this.items = timenArray; 
+	this.products = productsArray;
 
 
 }
