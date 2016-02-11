@@ -39,12 +39,8 @@ lineReader.on('line', function (line) {
             break;
         case 4:
             warehouses = new array(line);
+            break;
     }
-    if(linecounter==1) {
-
-
-    }
-
 
     if(debug) {
         //.log('Line from file:', line);
