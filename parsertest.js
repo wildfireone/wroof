@@ -1,8 +1,8 @@
 /**
  * Created by Isaacs on 11/02/2016.
  */
-require('./customer.js');
-require('./order.js');
+var customer = require('./customer.js');
+var order = require('./order.js');
     var debug = true;
 
 var inputfile = process.argv.slice(2)[0];
