@@ -17,7 +17,7 @@ var productweights;
 var warehouses;
 var linecounter =0;
 var lines = new Array();
-var index;
+var index =0;
 lineReader.on('line', function (line) {
     lines.push(line.split(' '));
 });
