@@ -58,9 +58,10 @@ lineReader.on('close', function(){
     }
 
     for(var i=0; i< warehouses.length; i++){
-        warehouses[i] = new Array();
-        warehouses[i].push(lines[index++]);
-        warehouses[i].push(lines[index++]);
+
+        var loc = lines[index++];
+        var items = lines[index++];
+        warehouses[i] = new Warehouse(items,loc);
     }
     index++;
     orders = new Array (parseInt(lines[index]));
