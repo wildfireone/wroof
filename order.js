@@ -1,4 +1,4 @@
-var order = function(productsArray, cust){
+module.exports = function Order(productsArray, cust){
 	
 	this.customer =cust;
 
