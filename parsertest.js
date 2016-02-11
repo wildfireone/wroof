@@ -39,7 +39,7 @@ lineReader.on('line', function (line) {
             productweights = line.split(' ');
             break;
         case 4:
-            warehouses = new array(line);
+            warehouses = new Array(line);
             break;
     }
 
